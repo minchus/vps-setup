@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  starchaser:
+    image: ghcr.io/minchus/starchaser:v1.0.0
+    container_name: starchaser
+    restart: always
+    volumes:
+      - "./.streamlit:/app/.streamlit"
+    environment:
+      - VIRTUAL_HOST=starchaser.minchus.com
+      - LETSENCRYPT_HOST=starchaser.minchus.com

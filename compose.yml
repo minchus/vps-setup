@@ -29,7 +29,20 @@ services:
       - acme:/etc/acme.sh
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      - DEFAULT_EMAIL=${LETS_ENCRYPT_EMAIL}
+      - DEFAULT_EMAIL=${LETSENCRYPT_EMAIL}
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    command: -H unix:///var/run/docker.sock
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    environment:
+      - VIRTUAL_HOST=portainer.minchus.com
+      - VIRTUAL_PORT=9000
+      - LETSENCRYPT_HOST=portainer.minchus.com
 
 volumes:
   conf:
@@ -38,3 +51,4 @@ volumes:
   dhparam:
   certs:
   acme:
+  portainer_data:

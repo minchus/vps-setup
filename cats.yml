@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  cats:
+    image: ghcr.io/minchus/cats-against-humanity:v1.0.0
+    container_name: cats
+    restart: always
+    environment:
+      - VIRTUAL_HOST=cats.minchus.com
+      - LETSENCRYPT_HOST=cats.minchus.com
+    expose:
+      - "5000"
