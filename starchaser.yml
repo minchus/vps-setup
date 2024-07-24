@@ -2,7 +2,7 @@ version: "2"
 
 services:
   starchaser:
-    image: ghcr.io/minchus/starchaser:v1.0.0
+    image: ghcr.io/minchus/starchaser:v1.0.1
     container_name: starchaser
     restart: always
     volumes:
