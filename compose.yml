@@ -40,9 +40,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
     environment:
-      - VIRTUAL_HOST=portainer.minchus.com
+      - VIRTUAL_HOST=portainer.minchus.com,www.portainer.minchus.com
       - VIRTUAL_PORT=9000
-      - LETSENCRYPT_HOST=portainer.minchus.com
+      - LETSENCRYPT_HOST=portainer.minchus.com,www.portainer.minchus.com
 
 volumes:
   conf:

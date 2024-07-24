@@ -8,5 +8,5 @@ services:
     volumes:
       - "./.streamlit:/app/.streamlit"
     environment:
-      - VIRTUAL_HOST=starchaser.minchus.com
-      - LETSENCRYPT_HOST=starchaser.minchus.com
+      - VIRTUAL_HOST=starchaser.minchus.com,www.starchaser.minchus.com
+      - LETSENCRYPT_HOST=starchaser.minchus.com,www.starchaser.minchus.com

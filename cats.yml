@@ -6,7 +6,7 @@ services:
     container_name: cats
     restart: always
     environment:
-      - VIRTUAL_HOST=cats.minchus.com
-      - LETSENCRYPT_HOST=cats.minchus.com
+      - VIRTUAL_HOST=cats.minchus.com,www.cats.minchus.com
+      - LETSENCRYPT_HOST=cats.minchus.com,www.cats.minchus.com
     expose:
       - "5000"
